@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import config from './config/index';
 
 export default function App() {
-  return (
-    <div>App</div>
-  )
+  useEffect(() => {
+    console.log(config);
+  }, []);
+
+  return <div>App</div>;
 }
