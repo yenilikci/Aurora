@@ -9,4 +9,9 @@ export default defineConfig({
   define: {
     'process.env': JSON.stringify(process.env),
   },
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
 });

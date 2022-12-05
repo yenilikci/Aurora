@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { Auth0Provider, AppState } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router';
-import config from 'config';
+import config from '@/config';
 
 const AuthProvider = (props: PropsWithChildren<{}>) => {
   const navigate = useNavigate();
