@@ -1,13 +1,13 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import paths from './paths';
 
-const Test = () => <div>hi!</div>;
+const Home = React.lazy(() => import('@/pages/Home/Home'));
 
 const Routers = () => {
   return (
     <Routes>
-      <Route path={paths.home} element={<Test />} />
-      <Route path={paths.codeEditor} element={<Test />} />
+      <Route path={paths.home} element={<Home />} />
     </Routes>
   );
 };

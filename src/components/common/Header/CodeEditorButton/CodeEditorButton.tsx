@@ -2,7 +2,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
-import paths from 'routes/paths';
+import paths from '@/routes/paths';
 
 const CodeEditorSyledButton = styled(Button)(({ theme }) => ({
   color: theme.commonColors.white,

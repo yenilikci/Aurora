@@ -1,22 +1,20 @@
-import React, { useEffect } from 'react';
-import config from './config/index';
+import { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AuthProvider from '@/auth/providers/AuthProvider';
 import CustomThemeProviders from '@/theme/providers/CustomThemeProviders';
 import Routes from '@/routes/Routes';
+import Loading from '@/components/common/Loading/Loading';
 
 export default function App() {
-  useEffect(() => {
-    console.log(config);
-  }, []);
-
   return (
-    <Router>
-      <AuthProvider>
-        <CustomThemeProviders>
-          <Routes />
-        </CustomThemeProviders>
-      </AuthProvider>
-    </Router>
+    <Suspense fallback={<Loading />}>
+      <Router>
+        <AuthProvider>
+          <CustomThemeProviders>
+            <Routes />
+          </CustomThemeProviders>
+        </AuthProvider>
+      </Router>
+    </Suspense>
   );
 }
