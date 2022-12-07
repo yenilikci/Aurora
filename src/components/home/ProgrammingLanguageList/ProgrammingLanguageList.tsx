@@ -20,13 +20,13 @@ const ProgrammingLanguageList = () => {
     JavaIcon,
     PhpIcon,
     RubyIcon,
-    PythonIcon,
+    PythonIcon
   ];
 
   const style = {
     padding: '10px',
     height: '50px',
-    width: '50px',
+    width: '50px'
   };
 
   return (
