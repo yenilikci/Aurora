@@ -6,6 +6,7 @@ import CodeEditorButton from './CodeEditorButton/CodeEditorButton';
 import SignInButton from './SignInButton/SignInButton';
 import SignOutButton from './SignOutButton/SignOutButton';
 import paths from '@/routes/paths';
+import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
@@ -21,6 +22,7 @@ const Header = () => {
         <Typography variant="h6" sx={{ flex: 1 }}>
           <StyledLink to={paths.codeEditor}>Code Editor App</StyledLink>
         </Typography>
+        <DarkModeSwitch />
         {isAuthenticated ? <AuthenticatedButtons /> : <UnauthenticatedButtons />}
       </Toolbar>
     </AppBar>
