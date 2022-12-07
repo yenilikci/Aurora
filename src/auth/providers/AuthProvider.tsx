@@ -7,7 +7,7 @@ const AuthProvider = (props: PropsWithChildren<{}>) => {
   const navigate = useNavigate();
 
   const onRedirectCallback = (appState: AppState) => {
-    navigate(appState?.returnTo || window.location.pathname);
+    navigate((appState && appState.returnTo) || window.location.pathname);
   };
 
   return (

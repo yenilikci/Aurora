@@ -13,7 +13,7 @@ const SignOutButton = () => {
     logout({ returnTo: window.location.origin });
   };
 
-  return <SignOutStyledButton onClick={onSigOut}>Sign In</SignOutStyledButton>;
+  return <SignOutStyledButton onClick={onSigOut}>Sign Out</SignOutStyledButton>;
 };
 
 export default SignOutButton;
