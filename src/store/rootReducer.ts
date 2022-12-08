@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import { darkModeReducer } from './slices/darkMode/darkMode';
 import { persistReducer } from 'redux-persist';
+import { darkModeReducer } from './slices/darkMode/darkMode';
+import { filesReducer } from './slices/files/files';
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
@@ -10,6 +11,7 @@ const persistConfig = {
 
 const combinedReducers = combineReducers({
   darkMode: darkModeReducer,
+  files: filesReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, combinedReducers);
