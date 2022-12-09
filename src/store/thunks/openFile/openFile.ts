@@ -1,4 +1,4 @@
-import { addActiveFile, setEditorActiveFile } from '@/store/slices/files/files';
+import { addActiveFile, setEditorActiveFile } from '../../slices/files/files';
 import { TreeViewNode } from '@/types/Files';
 import { AppDispatch, RootState } from '@/types/Store';
 
