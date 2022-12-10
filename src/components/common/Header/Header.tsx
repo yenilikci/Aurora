@@ -1,12 +1,13 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CodeEditorButton from './CodeEditorButton/CodeEditorButton';
 import SignInButton from './SignInButton/SignInButton';
 import SignOutButton from './SignOutButton/SignOutButton';
 import paths from '@/routes/paths';
 import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
+import OpenWorkspaceButton from './OpenWorkspaceButton/OpenWorkspaceButton';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
@@ -37,12 +38,18 @@ const UnauthenticatedButtons = () => {
   );
 };
 
+const AuthenticatedButtonsContainer = styled('div')({
+  display: 'flex',
+});
+
 const AuthenticatedButtons = () => {
+  const location = useLocation();
+
   return (
-    <div>
-      <CodeEditorButton />
+    <AuthenticatedButtonsContainer>
+      {location.pathname === paths.home ? <CodeEditorButton /> : <OpenWorkspaceButton />}
       <SignOutButton />
-    </div>
+    </AuthenticatedButtonsContainer>
   );
 };
 
