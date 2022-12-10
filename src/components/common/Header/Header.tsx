@@ -21,7 +21,7 @@ const Header = () => {
     <AppBar position="relative">
       <Toolbar>
         <Typography variant="h6" sx={{ flex: 1 }}>
-          <StyledLink to={paths.codeEditor}>Code Editor App</StyledLink>
+          <StyledLink to={paths.codeEditor}>Aurora</StyledLink>
         </Typography>
         <DarkModeSwitch />
         {isAuthenticated ? <AuthenticatedButtons /> : <UnauthenticatedButtons />}

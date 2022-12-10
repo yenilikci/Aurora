@@ -15,7 +15,7 @@ const CodeEditorButton = () => {
     navigate(paths.codeEditor);
   };
 
-  return <CodeEditorSyledButton onClick={onClick}>Code Editor</CodeEditorSyledButton>;
+  return <CodeEditorSyledButton onClick={onClick}>Aurora</CodeEditorSyledButton>;
 };
 
 export default CodeEditorButton;

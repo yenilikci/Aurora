@@ -21,9 +21,7 @@ const Home = () => {
   return (
     <Layout>
       <HomeContainer>
-        <WelcomeMessage>
-          Welcome to the Code Editor App
-        </WelcomeMessage>
+        <WelcomeMessage>Welcome to the Aurora</WelcomeMessage>
         <ProgrammingLanguageList />
       </HomeContainer>
     </Layout>
