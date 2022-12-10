@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { readFile } from '@/utils/readFile';
-import { setFiles } from '@/store/slices/files/files';
+import { readFile } from '../../../utils/readFile';
+import { setFiles } from '../../../store/slices/files/files';
 
-export const readFiles = createAsyncThunk('files/readFiles', async (files: FileList, { dispatch }) => {
+export const readFiles = createAsyncThunk('files/readFiles', async (files: any, { dispatch, getState }) => {
   const promises = [];
 
   for (let i = 0; i < files.length; i++) {

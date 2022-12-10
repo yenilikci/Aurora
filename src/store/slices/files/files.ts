@@ -17,7 +17,7 @@ const filesSlice = createSlice({
   name: 'files',
   initialState,
   reducers: {
-    setFiles(state, action: PayloadAction<UserFile[]>) {
+    setFiles(state, action: PayloadAction<UserFile[] | any>) {
       state.userFiles = action.payload;
       state.activeFilesIds = [];
     },

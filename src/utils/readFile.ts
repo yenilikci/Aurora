@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export const readFile = (file) => {
+export const readFile = (file: any) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsText(file);
