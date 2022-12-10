@@ -1,4 +1,4 @@
-import { removeActiveFile, setEditorActiveFile } from '@/store/slices/files/files';
+import { removeActiveFile, setEditorActiveFile } from '../../slices/files/files';
 import { AppDispatch, RootState } from '@/types/Store';
 
 export const closeFile = (fileToCloseId: string) => (dispatch: AppDispatch, getState: () => RootState) => {
