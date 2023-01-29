@@ -22,7 +22,10 @@ const supportedExtension: { [key: string]: string } = {
   rb: 'ruby',
   html: 'html',
   css: 'css',
-  json: 'json'
+  json: 'json',
+  svg: 'svg',
+  png: 'png',
+  ico: 'ico'
 };
 
 const CustomEditor = (props: CustomEditorProps) => {

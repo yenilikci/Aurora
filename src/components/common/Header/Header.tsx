@@ -1,5 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Avatar, IconButton, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link, useLocation } from 'react-router-dom';
 import CodeEditorButton from './CodeEditorButton/CodeEditorButton';
@@ -11,16 +11,19 @@ import OpenWorkspaceButton from './OpenWorkspaceButton/OpenWorkspaceButton';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
-  color: theme.commonColors.white,
+  color: theme.commonColors.white
 }));
 
 const Header = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <AppBar position="relative">
+    <AppBar position='relative'>
       <Toolbar>
-        <Typography variant="h6" sx={{ flex: 1 }}>
+        <IconButton sx={{ p: 0, mr: 1 }}>
+          <Avatar alt='Aurora' src='./aurora.svg' />
+        </IconButton>
+        <Typography variant='h6' sx={{ flex: 1 }}>
           <StyledLink to={paths.codeEditor}>Aurora</StyledLink>
         </Typography>
         <DarkModeSwitch />
@@ -39,7 +42,7 @@ const UnauthenticatedButtons = () => {
 };
 
 const AuthenticatedButtonsContainer = styled('div')({
-  display: 'flex',
+  display: 'flex'
 });
 
 const AuthenticatedButtons = () => {

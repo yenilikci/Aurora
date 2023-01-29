@@ -43,19 +43,18 @@ const CodeEditorContainer = () => {
           })
           }
         </Tabs>
-        {activeFiles.map(activeFile => {
-          const { id } = activeFile;
-          return <CustomTabPanel key={id} activeFile={activeFile} editorActiveFileId={editorActiveFileId} />;
-        })}
       </AppBar>
+      {activeFiles.map(activeFile => {
+        const { id } = activeFile;
+        return <CustomTabPanel key={id} activeFile={activeFile} editorActiveFileId={editorActiveFileId} />;
+      })}
     </CodeEditorContainerDiv>
   );
 };
 
 const CodeEditorContainerDiv = styled('div')({
   flex: 1,
-  height: '100%',
-  overflow: 'hidden'
+  height: '100%'
 });
 
 const EmptyMessage = styled('div')(({ theme }) => ({

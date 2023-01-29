@@ -9,6 +9,17 @@ import JavaIcon from '@/assets/images/java.svg';
 import PhpIcon from '@/assets/images/php.svg';
 import RubyIcon from '@/assets/images/ruby.svg';
 import PythonIcon from '@/assets/images/python.svg';
+import CssIcon from '@/assets/images/css.svg';
+import HtmlIcon from '@/assets/images/html.svg';
+import JsonIcon from '@/assets/images/json.svg';
+import SvgIcon from '@/assets/images/svg.svg';
+import PngIcon from '@/assets/images/png.svg';
+import IcoIcon from '@/assets/images/ico.svg';
+import TxtIcon from '@/assets/images/txt.svg';
+import MdIcon from '@/assets/images/md.svg';
+import JsxIcon from '@/assets/images/jsx.svg';
+import TsxIcon from '@/assets/images/tsx.svg';
+import TsIcon from '@/assets/images/ts.svg';
 
 type ExtensionIconProps = {
   extension?: string;
@@ -17,7 +28,7 @@ type ExtensionIconProps = {
 const style = {
   padding: '3px',
   height: '15px',
-  width: '15px',
+  width: '15px'
 };
 
 const ExtensionIcon = (props: ExtensionIconProps) => {
@@ -42,6 +53,28 @@ const ExtensionIcon = (props: ExtensionIconProps) => {
       return <img src={RubyIcon} style={style} />;
     case 'py':
       return <img src={PythonIcon} style={style} />;
+    case 'css':
+      return <img src={CssIcon} style={style} />;
+    case 'html':
+      return <img src={HtmlIcon} style={style} />;
+    case 'json':
+      return <img src={JsonIcon} style={style} />;
+    case 'svg':
+      return <img src={SvgIcon} style={style} />;
+    case 'ico':
+      return <img src={IcoIcon} style={style} />;
+    case 'md':
+      return <img src={MdIcon} style={style} />;
+    case 'txt':
+      return <img src={TxtIcon} style={style} />;
+    case 'png':
+      return <img src={PngIcon} style={style} />;
+    case 'tsx':
+      return <img src={TsxIcon} style={style} />;
+    case 'jsx':
+      return <img src={JsxIcon} style={style} />;
+    case 'ts':
+      return <img src={TsIcon} style={style} />;
     default:
       return <img src={DefaultIcon} style={style} />;
   }

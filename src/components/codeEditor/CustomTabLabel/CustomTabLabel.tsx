@@ -28,7 +28,7 @@ const CustomTabLabel = (props: CustomTabLabelProps) => {
       </FileName>
       <CloseIcon
         onClick={onClose}
-        sx={{ position: 'absolute', right: 0, color: (theme) => theme.font }}
+        sx={{ position: 'absolute', fontSize: '12px', right: 0, color: (theme) => theme.font }}
       />
     </CustomTabLabelContainer>
   );
@@ -42,7 +42,7 @@ const CustomTabLabelContainer = styled('div')({
 });
 
 const FileName = styled('div')(({ theme }) => ({
-  padding: '0px 5px',
+  padding: '0px 8px',
   color: theme.font
 }));
 
